@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+   <ion-title align="center"><b style="color: red;">More Usefull News</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+<br><hr>
+
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>Its for Your Short Knowledge</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+      <ion-card *ngFor="let a of hello?.articles" (click)="Currentarticle(a)" style="width: 80%; text-align:center; margin: 8px auto;">
+        <ion-card-header>
+          <ion-card-title>{{a.title}}</ion-card-title>
+          <br>
+          <img [src]="a.urlToImage" />
+        </ion-card-header>
+        <p>
+          {{a.discription}}
+        </p>
+        <hr>
+      </ion-card>
+      
+
+      <ion-card *ngFor="let a of hello2?.articles" (click)="Currentarticle(a)" style="width: 80%; text-align:center; margin: 8px auto;">
+        <ion-card-header>
+          <ion-card-title>{{a.title}}</ion-card-title>
+          <br>
+          <img [src]="a.urlToImage" />
+        </ion-card-header>
+        <p>
+          {{a.discription}}
+        </p>
+        <hr>
+      </ion-card>
+      
+      
+      <ion-card *ngFor="let a of hello4?.articles" (click)="Currentarticle(a)" style="width: 80%; text-align:center; margin: 8px auto;">
+        <ion-card-header>
+          <ion-card-title>{{a.title}}</ion-card-title>
+          <br>
+          <img [src]="a.urlToImage" />
+        </ion-card-header>
+        <p>
+          {{a.discription}}
+        </p>
+        <hr>
+      </ion-card>
+      <br>
+  
+</ion-content>

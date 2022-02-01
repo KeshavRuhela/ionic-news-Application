@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+   <ion-title align="center"><b style="color: red;">news</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+<hr>
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>Latest Update News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <div style="margin: 5vw auto; text-align: center; width:50%;  ">
+    <button style="background-color: black; color: white; font-weight: 700; height: 30px; width:100px;">hello</button>
+  </div> -->
+ 
+  
+      <ion-card *ngFor="let a of data?.articles" (click)="Currentarticle(a)" style="width: 80%; text-align:center; margin: 5px auto;">
+        
+        <ion-card-header>
+          <!-- <ion-card-subtitle>Destination</ion-card-subtitle> -->
+          <ion-card-title>{{a.title}}</ion-card-title>
+          <br>
+          <img [src]="a.urlToImage" />
+        </ion-card-header>
+        <p>
+          {{a.discription}}
+        </p>
+        <hr>
+      </ion-card>
+  
+</ion-content>

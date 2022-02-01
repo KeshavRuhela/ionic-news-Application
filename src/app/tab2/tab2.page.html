@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{finalArticle.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br>
+  <div>
+    <abbr [title]="finalArticle.title"><img [src]="finalArticle.urlToImage" alt="Net Work Error !"></abbr>
+  </div>
+  <div>
+    <br><br>
+    <div style="margin: 5px; padding: 5px; font-weight: 700;">Sspect Name : {{finalArticle.author}}</div>
+    <br>
+    <div style="text-align: justify; padding: 5px; margin: 5px;">{{finalArticle.content}}</div>
+    <br>
+    <div style="text-align: justify; margin: 5px; padding: 5px;">{{finalArticle.description}}</div>
+  </div>
+    <!-- <a [href]="finalArticle.url"><ion-icon style="font-size:30px;" name="videocam-outline"></ion-icon></a> -->
+<br>
+<hr>
+</ion-content>
+<ion-footer>
+  <button style="    width: 72px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #3533e8;
+  color: white; padding: 5px;" (click)="Home()">Back</button>
+</ion-footer>
